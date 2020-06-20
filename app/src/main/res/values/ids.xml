@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ItemNameToDelete" type="id" />
+    <item name="deletetext" type="id" />
+    <item name="content_id" type="id" />
+    <item name="contentid" type="id" />
+</resources>

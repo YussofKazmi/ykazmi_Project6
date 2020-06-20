@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomnavfile"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/addScreen2"
+        android:name="com.example.finalprojectapp.AddScreen"
+        android:label="fragment_add_screen"
+        tools:layout="@layout/fragment_add_screen" >
+        <action
+            android:id="@+id/fromAddScreenToHome"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/FromAddScreenToDelete"
+            app:destination="@id/deletescreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/deletescreen"
+        android:name="com.example.finalprojectapp.deletescreen"
+        android:label="fragment_deletescreen"
+        tools:layout="@layout/fragment_deletescreen" >
+        <action
+            android:id="@+id/FromDeleteScreenToAdd"
+            app:destination="@id/addScreen2" />
+        <action
+            android:id="@+id/FromDeleteScreenToHome"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.finalprojectapp.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/FromHomeToAdd"
+            app:destination="@id/addScreen2" />
+        <action
+            android:id="@+id/FromHomeToDelete"
+            app:destination="@id/deletescreen" />
+    </fragment>
+</navigation>
